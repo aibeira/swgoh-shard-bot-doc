@@ -6,7 +6,7 @@ This data includes primarily the players' names and their payout hours.  Each pl
 
 To begin using the bot, you need to accomplish the following tasks:
 
-0. Add the bot to the server
+1. Add the bot to the server
 0. Configure administration role
 0. Add players
 0. Add payouts
