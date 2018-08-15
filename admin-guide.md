@@ -1,9 +1,5 @@
-# SWGOH Shard-bot Getting Started
-## General
-This bot provides various tools to help with arena (fleet or squad) shards.  Primarily, this is done through data about players in the shard.  
-
-This data includes primarily the players' names and their payout hours.  Each player can be categorized as a "friend" or an "enemy."  Any player's payout hour can be tracked, allowing for a schedule to be shown and managed.  This schedule will show which players are getting paid by hour, and organizes those players by "friend" or "enemy".  This data is displayed in channels in a Discord server, as well as at a specific webpage.  The data can be maintained by using Discord bot commands, in addition to some administrative webpages.
-
+# SWGOH Shard-bot Admin Guide
+## Getting Started
 To begin using the bot, you need to accomplish the following tasks:
 
 1. Add the bot to the server
@@ -18,11 +14,11 @@ https://discordapp.com/oauth2/authorize?&client_id=347564015917989889&scope=bot&
 
 When this link is first hit, you will be asked to sign into Discord, if you have not already signed in.  After signing in, select the server to which you want to add the bot and hit the "Authorize" button, as seen here:
 
-![Image](add_bot.png)
+![Image](images/add_bot.png)
 
 You may be asked to prove you are not a robot - just confirm that, and the bot will be authorized on your server, as confirmed by Discord like here:
 
-![Image](add_bot_success.png)
+![Image](images/add_bot_success.png)
 ## Configure adminstration role
 After the bot has been added to the server, the bot needs to be configured with one or more Discord roles that contain those Discord users that will administer the bot configuration (player data, payout data, etc...)  This initial configuration can only be completed by the owner of the Discord server.  The command is as follows:
 
@@ -32,7 +28,7 @@ After the bot has been added to the server, the bot needs to be configured with 
 
 The successful adding of an adminRole to the bot looks like this:
 
-![Image](add_adminrole.png)
+![Image](images/add_adminrole.png)
 
 ## Players
 Players can be added using the administration web page, once the bot is in the server, and at least one adminRole has been configured, and add players that way.  The admin page url is: 
@@ -41,11 +37,11 @@ http://www.mralwerner.com/swgoh-shard/admin
 
 When you access this page, you will be asked ot sign into Discord in order to retrieve a list of servers to allow you to manage the data.  Select the server you want to manage, and then click "Players".
 
-![Image](admin_page_main.png)
+![Image](images/admin_page_main.png)
 
 After accessing the Players page, you will need to click the "Add Player" button at the bottom.
 
-![Image](admin_page_player.png)
+![Image](images/admin_page_player.png)
 
 Fill in the required fields, and hit "Save Player."  
 
@@ -70,21 +66,21 @@ Payouts can only be created from Discord commands at this time.  This command wi
 
 * `<payoutTimeUTC>` - The payout time in UTC - ie, 01:00
 * `<payoutHour>` - The hour component of the payout time - ie, 1
-* `<friendly-names-list>` - A comma-separated list of friendly names used to refer to this payout.
+* `<friendly-names-list>` - A comma-separated list of friendly names used to refer to this payout.  If you have specific channels set up for specific payouts, you can use the name of those channels as friendly-names for the corresponding payouts.  This will allow shard-bot to guess at which payout to list based on the channel name, if no friendly-name is specified when the `;po` command is used.
 
 **Note:** The value of the `payoutHour` is what links the players to the payouts.
 
 For example, the following added a payout for 01:00 UTC (7:00pm MDT) with a few friendly names:
 
-![Image](payout_hour_added.png)
+![Image](images/payout_hour_added.png)
 
 After adding payouts, you can manage them in the admin page.  You can add players to rotation, reorder the rotation, reverse the order in which rotations rotates, and cycle the rotation.  This page is accessed by clicking the "Payouts" link from the main admin page after logging in:
 
-![Image](admin_page_main.png)
+![Image](images/admin_page_main.png)
 
 The payouts managment page allows for management of payouts data:
 
-![Image](admin_page_payout.png)
+![Image](images/admin_page_payout.png)
 
 ## Scheduling automatic payout notification
 You can schedule the bot to dump into a specific channel the data for a specific payout at a specific time.  This command must be executed in the channel in which you wnat the notification.  The command is:
@@ -96,4 +92,4 @@ You can schedule the bot to dump into a specific channel the data for a specific
 
 This example schedules one for 11:30pm UTC:
 
-![Image](scheduled_notification.png)
+![Image](images/scheduled_notification.png)
