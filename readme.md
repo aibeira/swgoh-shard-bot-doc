@@ -7,6 +7,8 @@ For help getting started, including adding the bot to your Discord server, pleas
 
 For information on commands that can be used to get data and information from the bot, please refer to the [Command Guide](command-guide.md).
 
+If you have questions, issues, or suggestions, please contact me at the [shard-bot-support Discord server](https://discord.gg/yX6qZm7).
+
 ## Example Discord output
 This bot will produce the following kinds of output about players in an arena shard in Discord:
 
