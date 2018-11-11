@@ -49,7 +49,7 @@ The following fields are required:
  
 * **Name** - The player's in-game and/or Discord name.
 * **Type** - The player's type - Friend or Enemy
-* **Payout Time (UTC)** - The time of the player's payout in the UTC time, and in format "HH:mm".  For example, 01:00 is 1:00am UTC, or 9:00pm EDT.  
+* **Payout Time (UTC)** - The time of the player's payout in the UTC time, and in format "HH:mm" - 24-hour time in the UTC time zone (*no "am/pm" or time-zone should be specified*).  For example, 01:00 is 1:00am UTC, or 9:00pm EDT.   
 * **Payout Hour** - The hour component of the player's payout time.  This field will eventually be removed, as it can be derived, but for now, just enter the number of the hour you just put in the payout time UTC.
 
 The other fields are optional.
@@ -60,21 +60,7 @@ The other fields are optional.
 * **Discord Emoji** - A Discord Emoji that will be displayed in Discord next to the players name.  It should include the leading and trailing colon (:).  For example ":flag_us:" is the emoji for the US flag and ":poop:" makes a nice emoji to be next to an enemy.
 
 ## Payouts
-Payouts can only be created from Discord commands at this time.  This command will add a payout:
-
-`;epo --add --payoutHour <payoutHour> --payoutTimeUTC <payoutTimeUTC> --friendlyNames <friendly-names-list> --rotationOrder 1`
-
-* `<payoutTimeUTC>` - The payout time in UTC - ie, 01:00
-* `<payoutHour>` - The hour component of the payout time - ie, 1
-* `<friendly-names-list>` - A comma-separated list of friendly names used to refer to this payout.  If you have specific channels set up for specific payouts, you can use the name of those channels as friendly-names for the corresponding payouts.  This will allow shard-bot to guess at which payout to list based on the channel name, if no friendly-name is specified when the `;po` command is used.
-
-**Note:** The value of the `payoutHour` is what links the players to the payouts.
-
-For example, the following added a payout for 01:00 UTC (7:00pm MDT) with a few friendly names:
-
-![Image](images/payout_hour_added.png)
-
-After adding payouts, you can manage them in the admin page.  You can add players to rotation, reorder the rotation, reverse the order in which rotations rotates, and cycle the rotation.  This page is accessed by clicking the "Payouts" link from the main admin page after logging in:
+Payouts can be managed in the admin page.  You can add payouts and edit payouts, including adding players to rotation, reorder the rotation, reverse the order in which rotations rotates, and cycle the rotation.  This page is accessed by clicking the "Payouts" link from the main admin page after logging in:
 
 ![Image](images/admin_page_main.png)
 
