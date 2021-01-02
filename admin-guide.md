@@ -19,6 +19,7 @@ When this link is first hit, you will be asked to sign into Discord, if you have
 You may be asked to prove you are not a robot - just confirm that, and the bot will be authorized on your server, as confirmed by Discord like here:
 
 ![Image](images/add_bot_success.png)
+
 ## Configure adminstration role
 After the bot has been added to the server, the bot needs to be configured with one or more Discord roles that contain those Discord users that will administer the bot configuration (player data, payout data, etc...)  This initial configuration can only be completed by the owner of the Discord server.  The command is as follows:
 
@@ -59,6 +60,50 @@ The other fields are optional.
 * **SWGOH.gg Profile URL** - The link to the player's swgoh.gg profile.  It will be displayed in most places the player's name is displayed in the webpage and in Discord.
 * **Discord Emoji** - A Discord Emoji that will be displayed in Discord next to the players name.  It should include the leading and trailing colon (:).  For example ":flag_us:" is the emoji for the US flag and ":poop:" makes a nice emoji to be next to an enemy.
 
+## Adding players using Ally Codes
+
+Players can be added to the bot's data for your shard using the players' ally codes.  This is done using two commands: `;acg` and `;bpa`.
+
+## ally-code-get (`acg`)
+The `;acg` command retrieves information about a specific player using their ally code and begins the process of adding that player to the bot's data.  This command must be executed in a channel in the shard's server.  This is completed via direct message exchange with the bot.  That data includes:
+* name
+* payout time
+
+Usage: `;acg <ally-code>`
+
+Here is an example of it being used in the channel:
+
+![Image](images/acg_channel.png)
+
+Here are exampes of the process continuing through direct message exchange:
+
+![Image](images/acg_dm_1.png)
+
+![Image](images/acg_dm_2.png)
+
+## bulk-player-add (`bpa`)
+The `;bpa` command is used to add a players in bulk from an uploaded plain-text list of ally codes.  The type of the players can be specified as enemy or friend on the command, but if omitted, enemy is assumed.
+
+Usage: `;acg [--type friend]`
+
+**Text File Format**
+
+The text file should be a list of ally codes, one per line.  For example:
+
+```
+878834387
+617334837
+911145120
+915345238
+732421962
+755719414
+861941268
+353829640
+673953483
+```
+
+The bot will update you on it's progress as it goes through the list.  It is suggested that you not do more than about 50 players at a time.
+
 ## Payouts
 Payouts can be managed in the admin page.  You can add payouts and edit payouts, including adding players to rotation, reorder the rotation, reverse the order in which rotations rotates, and cycle the rotation.  This page is accessed by clicking the "Payouts" link from the main admin page after logging in:
 
@@ -79,3 +124,10 @@ You can schedule the bot to dump into a specific channel the data for a specific
 This example schedules one for 11:30pm UTC:
 
 ![Image](images/scheduled_notification.png)
+
+## Discord IDs
+* Frequently when dealing with shard-bot or getting support for it, you'll need various Discord IDs - Player IDs, Server IDs, Channel IDs, Role IDs, etc.  Most of these can be found in the Discord clients, if you turn on "Developer Mode" on your user settings:
+    * User Settings > Appearance (usually a good portion of the way down the list) > Advanced (near the bottom) section > Developer Mode
+* Once Developer Mode is enabled, you can right-click (or tap) on most things and get an option "Copy ID"
+* The Server ID can also be found in the Server Settings:
+    * Server Settings > Widget > Server ID

@@ -21,3 +21,7 @@ The `;arenarank` command returns information about how far you can jump in arena
 The `;wp` command can be used to retrieve a link to the web page that presents the payout schedule for the players in the shard that the bot knows about.  If you are in an administrator role, you can add the parameter `--admin` to the command to get the link to the administration pages.
 
 ![Image](images/command_wp.png)
+
+## web-page-player (`wpp`)
+
+The `;wpp` command can be used to retrieve a link to the web page that allows the player to manage their direct notification settings.
