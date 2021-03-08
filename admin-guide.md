@@ -84,7 +84,7 @@ Here are exampes of the process continuing through direct message exchange:
 ## bulk-player-add (`bpa`)
 The `;bpa` command is used to add a players in bulk from an uploaded plain-text list of ally codes.  The type of the players can be specified as enemy or friend on the command, but if omitted, enemy is assumed.
 
-Usage: `;acg [--type friend]`
+Usage: `;bpa [--type friend]`
 
 **Text File Format**
 
