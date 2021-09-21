@@ -10,7 +10,7 @@ To begin using the bot, you need to accomplish the following tasks:
 ## Add bot to Discord server
 Use the following link to add the bot to your Discord server.  You will need to be an administrator, though not the owner, of the server.
 
-https://discordapp.com/oauth2/authorize?&client_id=347564015917989889&scope=bot&permissions=0
+https://discord.com/api/oauth2/authorize?client_id=347564015917989889&permissions=0&redirect_uri=http%3A%2F%2Flocalhost%3A4200%2Flogin&scope=applications.commands%20bot
 
 When this link is first hit, you will be asked to sign into Discord, if you have not already signed in.  After signing in, select the server to which you want to add the bot and hit the "Authorize" button, as seen here:
 
